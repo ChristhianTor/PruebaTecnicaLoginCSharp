@@ -1,0 +1,60 @@
+﻿@model ReportesMVC.Models.Persona
+
+@{
+    ViewData["Title"] = "Editar Persona";
+}
+
+<h2>Editar Persona</h2>
+
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="IIDPERSONA" />
+
+    <div class="form-group">
+        <label asp-for="NOMBRE"></label>
+        <input asp-for="NOMBRE" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="APPATERNO"></label>
+        <input asp-for="APPATERNO" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="APMATERNO"></label>
+        <input asp-for="APMATERNO" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IIDSEXO"></label>
+        <input asp-for="IIDSEXO" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CORREO"></label>
+        <input asp-for="CORREO" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TELEFONOOCELULAR1"></label>
+        <input asp-for="TELEFONOOCELULAR1" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IIDTIPODOCUMENTO"></label>
+        <input asp-for="IIDTIPODOCUMENTO" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NUMEROIDENTIFICACION"></label>
+        <input asp-for="NUMEROIDENTIFICACION" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ESTADOPAIS"></label>
+        <input asp-for="ESTADOPAIS" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>

@@ -1,0 +1,63 @@
+﻿@model List<ReportesMVC.Models.Persona>
+
+@{
+    ViewData["Title"] = "Listado De Personas";
+}
+
+<h2>Personas Registradas</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Numero De Identificacion</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Sexo</th>
+            <th>Correo</th>
+            <th>Tel o Cel 1</th>
+            <th>Tel o Cel 2</th>
+            <th>Calle</th>
+            <th>Numero Exterior</th>
+            <th>Numero Interior</th>
+            <th>Colonia</th>
+            <th>CP</th>
+            <th>Municipio/Pais</th>
+            <th>Estado/Pais</th>
+            <th>Tipo De Documento</th>
+            <th>NRUC</th>
+            <th>Foto</th>
+            <th>Habilitado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var persona in Model)
+        {
+            <tr>
+                <td>@persona.IIDPERSONA</td>
+                <td>@persona.NUMEROIDENTIFICACION</td>
+                <td>@persona.NOMBRE</td>
+                <td>@persona.APPATERNO</td>
+                <td>@persona.APMATERNO</td>
+                <td>@persona.IIDSEXO</td>
+                <td>@persona.CORREO</td>
+                <td>@persona.TELEFONOOCELULAR1</td>
+                <td>@persona.TELEFONOOCELULAR2</td>
+                <td>@persona.CALLE</td>
+                <td>@persona.NEXTERIOR</td>
+                <td>@persona.NINTERIOR</td>
+                <td>@persona.COLONIA</td>
+                <td>@persona.CP</td>
+                <td>@persona.MUNICIPIOPAIS</td>
+                <td>@persona.ESTADOPAIS</td>
+                <td>@persona.IIDTIPODOCUMENTO</td>
+                <td>@persona.NUMEROREGISTROUNICOCONTRIBUYENTE</td>
+                <td>@persona.NOMBREFOTO</td>
+                <td>@persona.BHABILITADO</td>
+                <td><a asp-action="Editar" asp-route-id="@persona.IIDPERSONA" class="btn btn-sm btn-primary">Editar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
